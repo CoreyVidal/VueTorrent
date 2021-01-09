@@ -1,51 +1,69 @@
 <template>
-  <v-row justify="space-between">
+  <v-row align="center" align-content="center" justify="center">
     <v-col>
       <v-tooltip top>
         <template #activator="{ on }">
           <v-list-item link v-on="on" @click="logout">
-            <v-icon class="white--text">
-              exit_to_app
-            </v-icon>
+            <v-btn icon plain>
+              <v-icon color="grey">
+                mdi-exit-to-app
+              </v-icon>
+            </v-btn>
           </v-list-item>
         </template>
-        <span>Log out</span>
+        <span>
+          Log out
+        </span>
       </v-tooltip>
     </v-col>
     <v-col>
       <v-tooltip top>
         <template #activator="{ on }">
           <v-list-item link v-on="on" @click="toggleSpeed">
-            <v-icon
-              :color="altSpeed ? 'download' : ''"
-              class="white--text"
-            >
-              speed
-            </v-icon>
+            <v-btn icon>
+              <v-icon
+                v-if="altSpeed"
+                color="secondary"
+              >
+                mdi-speedometer-slow
+              </v-icon>
+              <v-icon
+                v-else
+                color="grey"
+              >
+                mdi-speedometer
+              </v-icon>
+            </v-btn>
           </v-list-item>
         </template>
-        <span>Alt speeds</span>
+        <span>
+          Alt. speeds
+        </span>
       </v-tooltip>
     </v-col>
     <v-col>
       <v-tooltip top>
         <template #activator="{ on }">
           <v-list-item link v-on="on" @click="toggleTheme">
-            <v-icon
-              v-if="theme === 'Light'"
-              class="white--text"
-            >
-              brightness_7
-            </v-icon>
-            <v-icon
-              v-else
-              class="white--text"
-            >
-              brightness_2
-            </v-icon>
+            <v-btn icon>
+              <v-icon
+                v-if="theme === 'Light'"
+                color="grey"
+              >
+                mdi-brightness-7
+              </v-icon>
+              <v-icon
+                v-else
+                color="grey"
+              >
+                mdi-brightness-4
+              </v-icon>
+            </v-btn>
           </v-list-item>
         </template>
-        <span>{{ theme }}</span>
+        <span>
+          {{ theme }}
+        </span>
       </v-tooltip>
     </v-col>
   </v-row>

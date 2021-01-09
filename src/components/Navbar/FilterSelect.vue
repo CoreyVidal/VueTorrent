@@ -1,63 +1,42 @@
 <template>
   <div style="margin-top: 30px">
-    <div class="secondary_lighter--text text-uppercase caption ml-4">
-      Status
-    </div>
     <v-select
       v-model="selectedState"
       :value="selectedState"
-      flat
-      class="ml-2 mr-2"
+      outlined
+      class="ml-2 mr-2 side-select"
+      label="STATUS"
       :items="options"
       item-text="name"
       item-value="value"
-      dense
-      solo
-      color="download"
-      background-color="secondary"
-      item-color="download"
-      height="55"
+      item-color="primary"
       @input="setStatusFilter"
     />
-    <div class="secondary_lighter--text text-uppercase caption ml-4">
-      Category
-    </div>
     <v-select
       v-model="selectedCategory"
       :value="selectedCategory"
-      flat
-      class="ml-2 mr-2"
+      outlined
+      class="ml-2 mr-2 side-select"
+      label="CATEGORIES"
       :items="availableCategories"
-      dense
-      solo
-      color="download"
-      background-color="secondary"
-      item-color="download"
-      height="55"
+      item-color="primary"
       @input="setCategoryOrTrackerFilter"
     />
     <div v-if="showTrackerFilter">
-      <div class="secondary_lighter--text text-uppercase caption ml-4">
-        Tracker
-      </div>
       <v-select
         v-model="selectedTracker"
         :value="selectedTracker"
-        flat
-        class="ml-2 mr-2"
+        outlined
+        class="ml-2 mr-2 side-select"
+        label="TRACKER"
         :items="availableTrackers"
-        dense
-        solo
-        color="download"
-        background-color="secondary"
-        item-color="download"
-        height="55"
+        item-color="primary"
         @input="setCategoryOrTrackerFilter"
       />
     </div>
     <div
       style="font-size: 0.9em"
-      class="download--text text-uppercase text-center"
+      class="primary--text text-uppercase text-center"
     >
       {{ torrentCountString }}
     </div>
@@ -149,10 +128,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.v-select__selection,
-.v-input__icon i {
-    color: #64ceaa !important;
-}
-</style>

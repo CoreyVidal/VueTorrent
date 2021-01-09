@@ -32,7 +32,7 @@
               </v-btn>
               <v-btn
                 text
-                class="green_accent white--text mt-3"
+                class="accent white--text mt-3"
                 @click="createTag"
               >
                 Create new
@@ -66,7 +66,7 @@
               </v-btn>
               <v-btn
                 text
-                class="green_accent white--text mt-3"
+                class="accent white--text mt-3"
                 @click="createCategory"
               >
                 Create new

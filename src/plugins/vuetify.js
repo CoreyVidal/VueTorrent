@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
+import Vuetify from 'vuetify/lib/framework'
+// import 'vuetify/dist/vuetify.min.css'
 
 import colors from 'vuetify/lib/util/colors'
 import variables from '../styles/variables.scss'
@@ -15,39 +15,43 @@ export default new Vuetify({
     dark: false,
     themes: {
       light: {
-        primary: '#35495e',
-        secondary: '#3e556d',
-        secondary_lighter: '#56718c',
-        blue_accent: '#3cd1c2',
-        info: '#ffaa2c',
-        error: '#f83e70',
-        green_accent: '#3cd1c2',
+        primary: '#35495e', // built in
+        secondary: '#3e556d', // built in
+        accent: '#3CD1C2', // built in
+        error: '#f83e70', // built in
+        info: '#ffaa2c', // built in
+        success: '#4CAF50', // built in
+        warning: '#FFC107', // built in
+        background: colors.grey.lighten4,
+        appbar: '#ffffff',
+        navdrawer: '#eeeeee',
+        search: '#fff',
+        highlighted: '#00ff00',
         download: '#64CEAA',
         upload: '#00b3fa',
         torrent: '#fff',
-        torrent_selected: colors.grey.lighten2,
-        background: colors.grey.lighten4,
-        search: colors.grey.darken1,
-        torrentmodaltext: colors.grey.darken4,
-        select: colors.grey.lighten4,
+        torrentselected: colors.grey.lighten2,
+        torrentmodaltext: colors.grey.lighten4,
         ...variables
       },
       dark: {
-        primary: '#35495e',
-        secondary: '#3e556d',
-        secondary_lighter: '#56718c',
-        blue_accent: '#3cd1c2',
-        info: '#ffaa2c',
-        error: '#f83e70',
-        green_accent: '#3cd1c2',
-        download: '#64CEAA',
-        upload: '#00b3fa',
+        primary: '#BB86FC', // built in
+        secondary: '#03DAC5', // built in
+        accent: '#82B1FF', // built in to Vuetify
+        error: '#f83e70', // built in
+        info: '#ffaa2c', // built in
+        success: '#4CAF50', // built in
+        warning: '#FFC107', // built in
+        background: '#121212',
+        appbar: '#202020',
+        navdrawer: '#212121',
+        search: '#121212',
+        highlighted: '#00ff00',
+        download: '#5bb974', // green. don't forget: Navbar/SpeedGraph.vue
+        upload: '#4ecde6', // blue. don't forget: Navbar/SpeedGraph.vue
         torrent: colors.grey.darken3,
-        torrent_selected: colors.blueGrey.darken1,
-        background: colors.grey.darken4,
-        search: colors.grey.darken3,
+        torrentselected: colors.blueGrey.darken1,
         torrentmodaltext: colors.grey.lighten4,
-        select: colors.grey.darken3,
         ...variables
       }
     }

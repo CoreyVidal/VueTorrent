@@ -41,7 +41,7 @@
             <v-subheader>
               Properties to display for completed torrents
             </v-subheader>
-            <v-row dense>
+            <v-row>
               <v-list flat class="ma-0 pa-0">
                 <draggable
                   :list="doneTorrentProperties"
@@ -52,7 +52,7 @@
                     :key="index"
                     style="width: 30vh"
                   >
-                    <v-checkbox v-model="item.active" dense class="pa-0 ma-0 mt-3" />
+                    <v-checkbox v-model="item.active" class="pa-0 ma-0 mt-3" />
                     <v-list-item-content>
                       <v-list-item-title class="truncate" v-text="item.name" />
                     </v-list-item-content>

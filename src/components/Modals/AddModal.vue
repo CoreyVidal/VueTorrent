@@ -117,7 +117,7 @@
             <v-btn
               text
               :disabled="!valid"
-              class="blue_accent white--text mx-0 mt-3"
+              class="accent white--text mx-0 mt-3"
               @click="submit"
             >
               Add Torrent

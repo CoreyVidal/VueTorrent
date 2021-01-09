@@ -1,16 +1,15 @@
 <template>
-  <v-list dense rounded>
+  <v-list>
     <v-list-item link @click="resume">
-      <v-icon>play_arrow</v-icon>
+      <v-icon>mdi-play</v-icon>
       <v-list-item-title
         class="ml-2"
-        style="font-size: 12px"
       >
         Resume
       </v-list-item-title>
     </v-list-item>
     <v-list-item link @click="pause">
-      <v-icon>pause</v-icon>
+      <v-icon>mdi-pause</v-icon>
       <v-list-item-title
         class="ml-2"
         style="font-size: 12px"
@@ -21,7 +20,7 @@
     <v-divider />
     <v-list-item link @click="deleteWithoutFiles">
       <v-icon color="red">
-        delete
+        mdi-delete
       </v-icon>
       <v-list-item-title
         class="ml-2"
@@ -32,7 +31,7 @@
     </v-list-item>
     <v-list-item link @click="deleteWithFiles">
       <v-icon color="red">
-        delete
+        mdi-delete-forever
       </v-icon>
       <v-list-item-title
         class="ml-2"

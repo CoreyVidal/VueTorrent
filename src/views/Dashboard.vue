@@ -25,29 +25,101 @@
       class="my-2 my-sm-4 pt-2 pt-sm-5 px-sm-8"
       @click.self="resetSelected"
     >
-      <v-flex
-        xs12
-        sm6
-        md3
-        @click.self="resetSelected"
-      >
-        <v-text-field
-          v-model="input"
-          flat
-          label="type to filter..."
-          height="50"
-          clearable
-          solo
-          color="search"
-          @click:clear="resetInput()"
-        />
-      </v-flex>
       <div v-if="torrents.length === 0" class="mt-5 text-xs-center">
+        <v-flex
+          xs12
+          sm6
+          md3
+          @click.self="resetSelected"
+        >
+          <v-text-field
+            v-model="input"
+            label="Filter"
+            outlined
+            clearable
+            append-outer-icon="mdi-filter"
+            background-color="search"
+            color="highlighted"
+            @click:clear="resetInput()"
+          />
+        </v-flex>
         <p class="grey--text">
           Nothing to see here!
         </p>
       </div>
       <div v-else>
+        <v-toolbar color="#202020">
+          <v-flex
+            xs12
+            sm6
+            md3
+            @click.self="resetSelected"
+          >
+            <v-text-field
+              v-model="input"
+              label="Filter"
+              outlined
+              clearable
+              append-outer-icon="mdi-filter"
+              background-color="search"
+              color="highlighted"
+              @click:clear="resetInput()"
+            />
+          </v-flex>
+          <v-btn
+            icon
+            :text="!mobile"
+            class="mr-0 ml-0"
+            @click="$store.state.selectMode = !$store.state.selectMode"
+          >
+            <v-icon color="grey">
+              {{ $store.state.selectMode ? 'mdi-select-off' : 'mdi-select' }}
+            </v-icon>
+          </v-btn>
+          <v-btn
+            icon
+            :text="!mobile"
+            class="mr-0 ml-0"
+            @click="addModal('SortModal')"
+          >
+            <v-icon color="grey">
+              mdi-sort
+            </v-icon>
+          </v-btn>
+          <v-btn
+            v-if="showAll"
+            icon
+            :text="!mobile"
+            class="mr-0 ml-0"
+            @click="removeTorrents"
+          >
+            <v-icon color="grey">
+              mdi-minus-box
+            </v-icon>
+          </v-btn>
+          <v-btn
+            v-if="showAll"
+            icon
+            :text="!mobile"
+            class="mr-0 ml-0"
+            @click="resumeTorrents"
+          >
+            <v-icon color="grey">
+              mdi-play
+            </v-icon>
+          </v-btn>
+          <v-btn
+            v-if="showAll"
+            icon
+            :text="!mobile"
+            class="mr-0 ml-0"
+            @click="pauseTorrents"
+          >
+            <v-icon color="grey">
+              mdi-pause
+            </v-icon>
+          </v-btn>
+        </v-toolbar>
         <v-layout
           v-for="(torrent, index) in paginatedData"
           :key="torrent.hash"

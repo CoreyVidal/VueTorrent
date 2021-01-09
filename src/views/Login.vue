@@ -21,7 +21,7 @@
                   solo
                   background-color="torrent"
                   label="username"
-                  prepend-icon="person"
+                  prepend-icon="mdi-account"
                   :rules="inputRules"
                   autocomplete="current email"
                   name="username"
@@ -34,7 +34,7 @@
                   background-color="torrent"
                   type="password"
                   label="password"
-                  prepend-icon="lock"
+                  prepend-icon="mdi-lock"
                   :rules="inputRules"
                   autocomplete="current password"
                   name="password"
@@ -44,7 +44,7 @@
                 <v-card-actions class="justify-center">
                   <v-btn
                     text
-                    class="blue_accent white--text mx-0 mt-3"
+                    class="accent white--text mx-0 mt-3"
                     @click="Login"
                   >
                     Login

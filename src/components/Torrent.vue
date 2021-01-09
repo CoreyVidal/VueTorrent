@@ -3,7 +3,7 @@
     ripple
     flat
     class="pointer torrent noselect"
-    :class="{ torrent_selected: isAlreadySelected(torrent.hash) }"
+    :class="{ torrentselected: isAlreadySelected(torrent.hash) }"
     @click.native.exact.prevent="
       $vuetify.breakpoint.smAndDown ?
         selectTorrent(torrent.hash) :

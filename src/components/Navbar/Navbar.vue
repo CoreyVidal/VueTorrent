@@ -1,9 +1,8 @@
 <template>
   <nav class="navbar">
     <!--title-->
-    <v-app-bar app flat color="background">
+    <v-app-bar app>
       <v-app-bar-nav-icon
-        class="grey--text text--lighten-1"
         @click.stop="drawer = !drawer"
       />
       <v-toolbar-title
@@ -24,9 +23,9 @@
     <v-navigation-drawer
       v-model="drawer"
       app
-      class="primary drawer"
+      color="navdrawer"
       style="position: fixed;"
-      width="280"
+      width="256"
       disable-resize-watcher
     >
       <v-flex

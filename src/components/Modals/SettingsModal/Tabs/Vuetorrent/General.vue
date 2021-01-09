@@ -13,7 +13,7 @@
                 v-model="showCurrentSpeed"
                 class="v-input--reverse v-input--expand pa-0 ma-0"
                 inset
-                color="green_accent"
+                color="accent"
               >
                 <template #label>
                   Show Current Speed
@@ -23,7 +23,7 @@
                 v-model="showSpeedGraph"
                 class="v-input--reverse v-input--expand pa-0 ma-0"
                 inset
-                color="green_accent"
+                color="accent"
               >
                 <template #label>
                   Show Speed Graph
@@ -33,7 +33,7 @@
                 v-model="showSessionStat"
                 class="v-input--reverse v-input--expand pa-0 ma-0"
                 inset
-                color="green_accent"
+                color="accent"
               >
                 <template #label>
                   Show Session Stats
@@ -43,7 +43,7 @@
                 v-model="freeSpace"
                 class="v-input--reverse v-input--expand pa-0 ma-0"
                 inset
-                color="green_accent"
+                color="accent"
               >
                 <template #label>
                   Show Free Space
@@ -53,7 +53,7 @@
                 v-model="showGlobalRemoveResumePause"
                 class="v-input--reverse v-input--expand pa-0 ma-0"
                 inset
-                color="green_accent"
+                color="accent"
               >
                 <template #label>
                   Global Remove/Resume/Pause Buttons
@@ -63,7 +63,7 @@
                 v-model="denseDashboard"
                 class="v-input--reverse v-input--expand pa-0 ma-0"
                 inset
-                color="green_accent"
+                color="accent"
               >
                 <template #label>
                   Dense version of the dashboard
@@ -73,7 +73,7 @@
                 v-model="showTrackerFilter"
                 class="v-input--reverse v-input--expand pa-0 ma-0"
                 inset
-                color="green_accent"
+                color="accent"
               >
                 <template #label>
                   Show Tracker Filter
@@ -83,7 +83,7 @@
                 v-model="showSpeedInTitle"
                 class="v-input--reverse v-input--expand pa-0 ma-0"
                 inset
-                color="green_accent"
+                color="accent"
               >
                 <template #label>
                   Show Speed in Title
@@ -99,7 +99,7 @@
                   <v-select
                     v-model="paginationSize"
                     class="pa-0 ma-0"
-                    color="green_accent"
+                    color="accent"
                     :items="paginationSizes"
                   />
                 </v-col>

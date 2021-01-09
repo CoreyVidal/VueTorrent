@@ -31,7 +31,7 @@ export default {
             }
           }
         },
-        colors: ['#00b3fa', '#64CEAA'],
+        colors: ['#4ecde6', '#5bb974'], // colors: uploaded, downloaded
         stroke: {
           show: true,
           curve: 'smooth',

@@ -1,13 +1,30 @@
+@import '~vuetify/src/components/VAppBar/_variables.scss';
+@import '~vuetify/src/components/VInput/_variables.scss';
+@import '~vuetify/src/components/VSelect/_variables.scss';
+@import '~vuetify/src/components/VBtn/_variables.scss';
+
+$app-bar-elevation: 24 !important;
+$input-font-size: 42px !important;
+$select-prefix-line-height: 0px !important;
+$btn-hover-opacity: 0;
+
 $torrent-done: #3cd1c2;
-$torrent-downloading: #ffaa2c;
+$torrent-downloading: #5bb974;
 $torrent-fail: #f83e70;
 $torrent-paused: #cfd8dc;
 $torrent-queued: #2e5eaa;
-$torrent-seeding: #0D9488;
+$torrent-seeding: #4ecde6;
 $torrent-checking: #ff7043;
 $torrent-stalled: #4ADE80;
 $torrent-metadata: #7e57c2;
-$torrent-moving: #ffaa2c;
+$torrent-moving: rgb(187, 134, 252);
+// 
+$primary: rgb(187, 134, 252);
+$primary-8pct: rgba(187, 134, 252, 0.08);
+$secondary: rgba(3, 218, 197, 1);
+$card-body: rgb(187, 134, 252);
+$mdd-purple: rgba(187, 134, 252, 1);
+$newtest: rgba(255, 255, 1, 0.8);
 
 :export {
   torrent-done-color: $torrent-done;
@@ -19,5 +36,5 @@ $torrent-moving: #ffaa2c;
   torrent-checking-color: $torrent-checking;
   torrent-stalled-color: $torrent-stalled;
   torrent-metadata-color: $torrent-metadata;
-  torrent-moving-color: $torrent-moving;
+	torrent-moving-color: $torrent-moving;
 }
