@@ -1,96 +1,86 @@
 <template>
   <div :class="mobile ? '' : 'flex-shrink-0 ml-0'">
     <v-btn
+      icon
       :text="!mobile"
-      small
-      fab
-      class="mr-0 ml-0"
-      @click="$store.state.selectMode = !$store.state.selectMode"
-    >
-      <v-icon color="grey">
-        {{ $store.state.selectMode ? 'check_box' : 'check_box_outline_blank' }}
-      </v-icon>
-    </v-btn>
-    <v-btn
-      :text="!mobile"
-      small
-      fab
       class="mr-0 ml-0"
       @click="addModal('SortModal')"
     >
       <v-icon color="grey">
-        sort
+        mdi-sort
       </v-icon>
     </v-btn>
     <v-btn
+      icon
       :text="!mobile"
-      small
-      fab
-      color="grey--text"
       class="mr-0 ml-0"
-      @click="addModal('SearchModal')"
+      @click="$store.state.selectMode = !$store.state.selectMode"
     >
       <v-icon color="grey">
-        search
-      </v-icon>
-    </v-btn>
-    <v-btn
-      :text="!mobile"
-      small
-      fab
-      color="grey--text"
-      class="mr-0 ml-0"
-      @click="addModal('AddModal')"
-    >
-      <v-icon color="grey">
-        add
+        {{ $store.state.selectMode ? 'mdi-select-off' : 'mdi-select' }}
       </v-icon>
     </v-btn>
     <v-btn
       v-if="showAll"
-      small
-      fab
+      icon
       :text="!mobile"
       class="mr-0 ml-0"
       @click="removeTorrents"
     >
       <v-icon color="grey">
-        remove
+        mdi-minus-box
       </v-icon>
     </v-btn>
     <v-btn
       v-if="showAll"
-      small
-      fab
+      icon
       :text="!mobile"
       class="mr-0 ml-0"
       @click="resumeTorrents"
     >
       <v-icon color="grey">
-        play_arrow
+        mdi-play
       </v-icon>
     </v-btn>
     <v-btn
       v-if="showAll"
-      small
-      fab
+      icon
       :text="!mobile"
       class="mr-0 ml-0"
       @click="pauseTorrents"
     >
       <v-icon color="grey">
-        pause
+        mdi-pause
       </v-icon>
     </v-btn>
     <v-btn
-      small
-      fab
+      icon
+      :text="!mobile"
+      class="mr-0 ml-0"
+      @click="addModal('AddModal')"
+    >
+      <v-icon color="grey">
+        mdi-plus-network
+      </v-icon>
+    </v-btn>
+    <v-btn
+      icon
+      :text="!mobile"
+      class="mr-0 ml-0"
+      @click="addModal('SearchModal')"
+    >
+      <v-icon color="grey">
+        mdi-cloud-search
+      </v-icon>
+    </v-btn>
+    <v-btn
+      icon
       :text="!mobile"
       class="mr-0 ml-0"
       @click="addModal('SettingsModal')"
     >
       <v-icon color="grey">
-        settings
+        mdi-cog
       </v-icon>
     </v-btn>
   </div>

@@ -21,7 +21,7 @@
                   solo
                   background-color="torrent"
                   label="username"
-                  prepend-icon="person"
+                  prepend-icon="mdi-account"
                   :rules="inputRules"
                   autocomplete="current email"
                   name="username"
@@ -34,7 +34,7 @@
                   background-color="torrent"
                   type="password"
                   label="password"
-                  prepend-icon="lock"
+                  prepend-icon="mdi-lock"
                   :rules="inputRules"
                   autocomplete="current password"
                   name="password"

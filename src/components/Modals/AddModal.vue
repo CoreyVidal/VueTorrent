@@ -71,7 +71,7 @@
                 :items="availableCategories"
                 clearable
                 label="Category"
-                prepend-icon="tag"
+                prepend-icon="mdi-tag"
                 @input="categoryChanged"
               />
 
@@ -79,7 +79,7 @@
                 v-model="directory"
                 :disabled="autoTMM"
                 label="Download Directory"
-                prepend-icon="folder"
+                prepend-icon="mdi-folder"
               />
               <v-row no-gutters>
                 <v-flex xs12 sm6>
