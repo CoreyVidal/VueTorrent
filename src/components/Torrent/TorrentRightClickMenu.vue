@@ -42,7 +42,7 @@
     </v-list-item>
     <v-divider />
     <v-list-item link @click="location">
-      <v-icon>folder</v-icon>
+      <v-icon>mdi-folder</v-icon>
       <v-list-item-title
         class="ml-2"
         style="font-size: 12px"
@@ -51,7 +51,7 @@
       </v-list-item-title>
     </v-list-item>
     <v-list-item link @click="rename">
-      <v-icon>edit</v-icon>
+      <v-icon>mdi-rename-box</v-icon>
       <v-list-item-title
         class="ml-2"
         style="font-size: 12px"
@@ -60,7 +60,7 @@
       </v-list-item-title>
     </v-list-item>
     <v-list-item link @click="recheck">
-      <v-icon>widgets</v-icon>
+      <v-icon>mdi-playlist-check</v-icon>
       <v-list-item-title
         class="ml-2"
         style="font-size: 12px;"
@@ -69,7 +69,7 @@
       </v-list-item-title>
     </v-list-item>
     <v-list-item link @click="reannounce">
-      <v-icon>record_voice_over</v-icon>
+      <v-icon>mdi-bullhorn</v-icon>
       <v-list-item-title
         class="ml-2"
         style="font-size: 12px"
@@ -83,13 +83,14 @@
     >
       <template #activator="{ on }">
         <v-list-item link v-on="on">
-          <v-icon>trending_up</v-icon>
+          <v-icon>mdi-priority-high</v-icon>
           <v-list-item-title
             class="ml-2"
             style="font-size: 12px"
           >
             Set Priority
           </v-list-item-title>
+          <v-icon>mdi-chevron-right</v-icon>
         </v-list-item>
       </template>
       <v-list dense rounded>
@@ -108,7 +109,7 @@
     </v-menu>
     <v-divider />
     <v-list-item link @click="showInfo">
-      <v-icon>info</v-icon>
+      <v-icon>mdi-folder-information</v-icon>
       <v-list-item-title
         class="ml-2"
         style="font-size: 12px"
@@ -117,7 +118,7 @@
       </v-list-item-title>
     </v-list-item>
     <v-list-item link @click="selectTorrent(hash)">
-      <v-icon>done</v-icon>
+      <v-icon>mdi-select</v-icon>
       <v-list-item-title
         class="ml-2"
       >
@@ -138,10 +139,10 @@ export default {
   },
   data: () => ({
     priority_options: [
-      { name: 'top', icon: 'upgrade', action: 'topPrio' },
-      { name: 'increase', icon: 'arrow_drop_up', action: 'increasePrio' },
-      { name: 'decrease', icon: 'arrow_drop_down', action: 'decreasePrio' },
-      { name: 'bottom', icon: 'vertical_align_bottom', action: 'bottomPrio' }
+      { name: 'top', icon: 'mdi-priority-high', action: 'topPrio' },
+      { name: 'increase', icon: 'mdi-arrow-up', action: 'increasePrio' },
+      { name: 'decrease', icon: 'mdi-arrow-down', action: 'decreasePrio' },
+      { name: 'bottom', icon: 'mdi-priority-low', action: 'bottomPrio' }
     ]
   }),
   computed: {

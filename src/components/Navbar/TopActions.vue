@@ -17,7 +17,7 @@
       @click="$store.state.selectMode = !$store.state.selectMode"
     >
       <v-icon color="grey">
-        {{ $store.state.selectMode ? 'mdi-select-off' : 'mdi-select' }}
+        {{ $store.state.selectMode ? 'mdi-select-off' : 'mdi-select-multiple' }}
       </v-icon>
     </v-btn>
     <v-btn
